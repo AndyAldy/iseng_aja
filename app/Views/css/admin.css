@@ -1,0 +1,60 @@
+@import url('dashboard.css');
+
+:root {
+  --accent-color: #27ae60;
+  --secondary-color: #1e63ff;
+}
+
+/* PAGE HEADER */
+.page-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn-create {
+  background-color: var(--accent-color);
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-create:hover {
+  background-color: #2ecc71;
+  transform: translateY(-3px);
+}
+
+/* ACTION BUTTONS */
+.card-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 1.5rem;
+}
+
+.btn-action {
+  flex-grow: 1;
+  padding: 10px;
+  text-align: center;
+  border-radius: 8px;
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-edit {
+  background-color: var(--secondary-color);
+}
+.btn-edit:hover {
+  background-color: #0055cc;
+}
+
+.btn-delete {
+  background-color: #c0392b;
+}
+.btn-delete:hover {
+  background-color: #a83222;
+}

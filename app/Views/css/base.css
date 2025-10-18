@@ -1,0 +1,149 @@
+/* Animasi latar Porsche-style */
+@keyframes fadeToWhite {
+  0% { background-color: #0e0e12; }
+  100% { background-color: #fff; }
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Porsche Next', 'Poppins', sans-serif;
+  background-color: #fff;
+  color: #111;
+  animation: fadeToWhite 1.2s cubic-bezier(.4, 0, .5, 1) forwards;
+  transition: background-color 0.4s ease;
+}
+
+/* Typography */
+h1, h2, h3 {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+a:hover {
+  color: #555;
+}
+
+/* Button */
+button, .btn, .btn-logout, .btn-create, .btn-action {
+  display: inline-block;
+  padding: 12px 28px;
+  font-size: 14px;
+  border: 1px solid #000;
+  background-color: transparent;
+  color: #000;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover, .btn:hover, .btn-logout:hover, .btn-create:hover, .btn-action:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+/* Layout */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 40px auto;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 60px;
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.header h1 {
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+}
+
+/* Card Layout */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 32px;
+  margin-top: 40px;
+}
+
+.car-card {
+  background-color: #fff;
+  border: 1px solid #eee;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.04);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.car-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.08);
+}
+
+.card-content h2 {
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+}
+
+/* Auth Form */
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(180deg, #fff 0%, #f9f9f9 100%);
+}
+
+.auth-form {
+  background: #fff;
+  border-radius: 16px;
+  padding: 40px 50px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.06);
+  width: 380px;
+  text-align: center;
+}
+
+.auth-form h1 {
+  margin-bottom: 24px;
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+input, select {
+  width: 100%;
+  padding: 12px 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+  font-size: 14px;
+}
+
+input:focus, select:focus {
+  border-color: #000;
+}
+
+label {
+  position: absolute;
+  left: 14px;
+  top: -10px;
+  background: #fff;
+  font-size: 13px;
+  padding: 0 5px;
+  color: #555;
+}
