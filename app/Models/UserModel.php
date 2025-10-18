@@ -7,11 +7,11 @@ use CodeIgniter\Model;
 class UserModel extends Model
 {
     protected $table            = 'users';
-    protected $primaryKey       = 'id_user';
+    protected $primaryKey       = 'id_user'; // Diubah menjadi id_user
     protected $allowedFields    = ['username', 'password', 'role'];
     protected $useTimestamps    = true;
-    protected $createdField     = 'dibuat';
-    protected $updatedField     = ''; // Tidak ada updated_at
+    protected $createdField     = 'dibuat';   // Diubah menjadi dibuat
+    protected $updatedField     = '';
 
     // Hash password sebelum disimpan
     protected $beforeInsert = ['hashPassword'];
