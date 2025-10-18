@@ -6,13 +6,13 @@ use CodeIgniter\Filters\FilterInterface;
 use CodeIgniter\HTTP\RequestInterface;
 use CodeIgniter\HTTP\ResponseInterface;
 
-class AuthFilter implements FilterInterface
+class LoginFilter implements FilterInterface
 {
     public function before(RequestInterface $request, $arguments = null)
     {
-        // Cek apakah user sudah login dan rolenya adalah admin
-        if (!session()->get('isLoggedIn') || session()->get('role') !== 'admin') {
-            return redirect()->to('/login')->with('error', 'Anda harus login sebagai admin untuk mengakses halaman ini.');
+        // Jika user belum login, redirect ke halaman login
+        if (! session()->get('isLoggedIn')) {
+            return redirect()->to('/login')->with('error', 'Anda harus login terlebih dahulu.');
         }
     }
 
